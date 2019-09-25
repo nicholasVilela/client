@@ -1,10 +1,20 @@
-import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {Home} from './components/Home'
 
-class App extends Component {
-  render() {
-    return <HelloWorld />
-  }
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Navbar />  
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          
+        </Switch>
+      </Router>
+    </>
+  );
 }
 
-export default App
+export default App;
+
